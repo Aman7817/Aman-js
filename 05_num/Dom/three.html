@@ -1,0 +1,74 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title","genrated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerText = "chai aur code"
+
+    const addText = document.createTextNode("chai aur code")
+    div.appendChild(addText)
+    document.body.appendChild(div)
+</script>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- The character encoding for the document, ensuring proper text display -->
+    <meta charset="UTF-8">
+    <!-- Ensures the page is responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title of the page, visible on the browser tab -->
+    <title>Dom </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <!-- Body has a dark background with white text -->
+</body>
+<script>
+    // Create a new div element dynamically using JavaScript
+    const div = document.createElement('div');
+    
+    // Logs the newly created div element to the console to inspect it
+    console.log(div);
+    
+    // Set the class name of the div to 'main'
+    div.className = "main";
+    
+    // Set a random ID for the div. The ID is a number between 1 and 10
+    div.id = Math.round(Math.random() * 10 + 1);
+    
+    // Set a custom 'title' attribute for the div (shows on hover in browsers)
+    div.setAttribute("title", "generated title");
+    
+    // Apply inline CSS styles to the div
+    div.style.backgroundColor = "green";  // Background color is green
+    div.style.padding = "12px";            // Add padding around the content
+    
+    // Optional: Uncomment to add inner text directly to the div (overwrites any text nodes added later)
+    // div.innerText = "chai aur code";
+
+    // Create a text node with the content "chai aur code"
+    const addText = document.createTextNode("chai aur code");
+    
+    // Append the text node to the div element
+    div.appendChild(addText);
+    
+    // Append the div with all the applied styles and text to the body of the document
+    document.body.appendChild(div);
+</script>
+</html>

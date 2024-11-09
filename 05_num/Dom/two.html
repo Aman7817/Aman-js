@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- The character encoding ensures proper display of text (UTF-8) -->
+    <meta charset="UTF-8">
+    <!-- This tag makes the page responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title of the page displayed on the browser tab -->
+    <title>Dom I chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <!-- This div holds all the days of the week -->
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div> <!-- Fixed capitalization -->
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    // Select the parent div (which contains all the days of the week)
+    const parent = document.querySelector('.parent');
+    
+    // Logs the entire 'parent' div (containing all the day divs)
+    console.log(parent);
+
+    // Logs the innerHTML (text content) of the second child (Tuesday)
+    console.log(parent.children[1].innerHTML);  // Logs "Tuesday"
+
+    // Changes the text color of the second child (Tuesday) to orange
+    parent.children[1].style.color = "orange"; 
+
+    // Loop through all children of the parent (the 'day' divs) and log their innerHTML
+    // FIX: Corrected the typo from 'childern' to 'children'
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML); // Logs the content of each 'day' div (e.g., "Monday", "Tuesday", etc.)
+    }
+
+    // Logs the first child element of the parent (which is the first day "Monday")
+    console.log(parent.firstElementChild);  // Logs the "Monday" div
+
+    // Logs the last child element of the parent (which is the last day "Thursday")
+    console.log(parent.lastElementChild);  // Logs the "Thursday" div
+
+    // Select the first '.day' div (Monday) and log it
+    const dayOne = document.querySelector(".day");
+    console.log(dayOne);  // Logs the first 'day' div (Monday)
+
+    // Logs the parent element of the 'dayOne' div (i.e., the parent div containing all the days)
+    console.log(dayOne.parentElement);  // Logs the 'parent' div
+
+    // Logs the next sibling element of the 'dayOne' div, which is the second day (Tuesday)
+    console.log(dayOne.nextElementSibling);  // Logs the "Tuesday" div
+
+    // Logs all child nodes of the parent div (including text nodes, spaces, and elements)
+    console.log("NODES:", parent.childNodes); // Logs all nodes (text nodes, elements, etc.)
+</script>
+</html>
